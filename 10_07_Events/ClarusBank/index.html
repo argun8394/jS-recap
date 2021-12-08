@@ -346,10 +346,18 @@
       
       
       const h1= document.querySelector("h1");
-      const highlightSpan= h1.querySelector(".highlight");
-      h1.firstElementChild.style.color = "red";
-      h1.lastElementChild.style.color = "blue";
-h1.closest(".header").style.backgroundColor ="yellow";
+      // const highlightSpan= h1.querySelector(".highlight");
+      // h1.firstElementChild.style.color = "red";
+      // h1.lastElementChild.style.color = "blue";
+      // h1.closest(".header").style.backgroundColor ="yellow";
+
+      // window.onload = () =>{
+      //   alert("Welcome");
+      // }
+
+      window.addEventListener("load", () =>{//load harici birşey yazarsak farklı algılar çalışmayabilir(eventlistener içinde load yazılmalı)
+        alert("Welcome to add event listeners");
+      })
 
 
     </script>
