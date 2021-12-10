@@ -17,7 +17,7 @@
         <nav class="nav">
             <img src="img/logo.png" alt="Bank logo" class="nav__logo" id="logo" />
             <ul class="nav__links">
-                <li class="nav__item" onclick="sayHello()">
+                <li class="nav__item" >
                     <a class="nav__link " href="#section--1 ">Features</a>
                 </li>
                 <li class="nav__item ">
@@ -369,17 +369,34 @@
       // navbarItem2.addEventListener("mouseout",()=>{
       //   navbarItem2.textContent= "Operations"});
 
-      const randomNumber = ()=>{
-        return Math.floor(Math.random()*255);
-      }
+      // const randomNumber = ()=>{
+      //   return Math.floor(Math.random()*255);
+      // }
 
-      const randomColor = ()=>{
-        return `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
-      }
+      // const randomColor = ()=>{
+      //   return `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
+      // }
 
-      navbarItem3.addEventListener("click",()=>{
-        navbarItem3.style.backgroundColor = randomColor();
-      })
+      // navbarItem3.addEventListener("click",()=>{
+      //   navbarItem3.style.backgroundColor = randomColor();
+      // })
+
+      document.querySelectorAll(".nav__link").forEach(
+        function(elements){
+          elements.addEventListener("click",function(element){
+            element.preventDefault();
+            const sectionId = this.getAttribute("href");
+            document.querySelector(sectionId).scrollIntoView({
+              behavior:"smooth"
+            });
+          });
+
+        });
+
+      // console.log(document.querySelectorAll(".nav__link"));
+
+
+
     </script>
   </body>
 </html>
