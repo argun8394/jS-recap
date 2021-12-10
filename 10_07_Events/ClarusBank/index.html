@@ -355,11 +355,31 @@
       //   alert("Welcome");
       // }
 
-      window.addEventListener("load", () =>{//load harici birşey yazarsak farklı algılar çalışmayabilir(eventlistener içinde load yazılmalı)
-        alert("Welcome to add event listeners");
+      // window.addEventListener("load", () =>{//load harici birşey yazarsak farklı algılar çalışmayabilir(eventlistener içinde load yazılmalı)
+      //   alert("Welcome to add event listeners");
+      // })
+
+      // navbarItem1.onclick = function(){ alert("Hello1")};
+      // navbarItem1.addEventListener("click",()=>{ alert("Hello2")});
+      // function sayHello(){ alert("Hello")};
+
+      // navbarItem2.addEventListener("mouseover",()=>{
+      //   navbarItem2.textContent= "over me"});
+
+      // navbarItem2.addEventListener("mouseout",()=>{
+      //   navbarItem2.textContent= "Operations"});
+
+      const randomNumber = ()=>{
+        return Math.floor(Math.random()*255);
+      }
+
+      const randomColor = ()=>{
+        return `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
+      }
+
+      navbarItem3.addEventListener("click",()=>{
+        navbarItem3.style.backgroundColor = randomColor();
       })
-
-
     </script>
   </body>
 </html>
