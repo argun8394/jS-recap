@@ -20,3 +20,10 @@ const showRemainChar = ()=>{
 }
 lastNameInput.addEventListener("keyup",showRemainChar);
 
+
+let birthday=document.getElementsByName("birthday")[0];
+birthday.addEventListener("change",function(){
+    alert(new Date(this.value).toLocaleDateString() + " date is selected!");// new Date ile string halden date çevirdik toLocaleDateString ile yerel tarih formatını aldık
+});
+
+
