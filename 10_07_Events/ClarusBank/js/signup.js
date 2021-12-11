@@ -26,4 +26,18 @@ birthday.addEventListener("change",function(){
     alert(new Date(this.value).toLocaleDateString() + " date is selected!");// new Date ile string halden date çevirdik toLocaleDateString ile yerel tarih formatını aldık
 });
 
+let validateEmail=()=>{
+    let email=document.getElementsByName("email")[0];
+    let errorSpan=document.querySelector("#errorSpan");
+
+    const regexPattern = /\S+\@+\S+\.+\S/; 
+    if (!regexPattern.test(email.value)){
+        errorSpan.innerHTML="invalid email address!";
+        errorSpan.style.color="red";
+    }else{
+        errorSpan.innerHTML="your email is valid!";
+        errorSpan.style.color="green";
+    }
+}
+
 
