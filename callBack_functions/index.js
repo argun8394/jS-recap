@@ -21,14 +21,32 @@ payments.forEach(function(item,i,array) {
 console.log(sumPos,sumNeg);
 */
 
+/*
 //Map()
 
 const str = "The Quick Brown Fox";
 
-var newstr=str.split("").map(c=> c=== c.toUpperCase()? c.toLowerCase() : c.toUpperCase()).join("");
+var newstr=str.split("").map(c=> c=== c.toUpperCase()? c.toLowerCase() : c.toUpperCase()).join(""); //tek satırda arrow function için return yazmaya gerek yok
 console.log(newstr);
 console.log(str);
 
+*/
+
+//filter()
+
+const words=[
+    "spray",
+    "limit",
+    "elite",
+    "exuberant",
+    "destruction",
+    "present",
+    "Clarusway",
+    "Future"
+];
+
+const result = words.filter((word)=>word.length>6);
+console.log(result);
 
 
 
