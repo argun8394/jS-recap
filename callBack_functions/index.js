@@ -51,10 +51,12 @@ console.log(result);
 */
 
 //reduce()
-
+/*
 const arr=[1,2,3,4,5,6,7];
 
 const result=arr.reduce((sum,curItem)=>{
     return sum + curItem;
 },0);
 console.log(result)
+
+*/
